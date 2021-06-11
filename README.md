@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Deep Racer Env
 
 This repository contains a simulator for AWS Deep Racer. At this point all of the constants are just my personal guessing. It runs using several dependencies including Shapely, pyOpenGL, pygame, and gym. And currently it must create a window to run. I also provided an implementation of PPO for training along with a jupyter notebook that shows how to use it. To use PPO, you will first need to install [pytorch](https://pytorch.org/get-started/locally/). Good luck!
@@ -39,3 +40,7 @@ Before anything else, make sure you have python 3 installed. I recommend getting
 pip install Shapely gym pygame pyOpenGL numpy imageio scikit-image
 ```
 And if you want to install pytorch, look at [pytorch](https://pytorch.org/get-started/locally/) for instructions specific to your computer.
+=======
+# my_racer
+deepracer-simulate
+>>>>>>> 635a852cc07a66f2a343a0a03786b12ddb26bae3
