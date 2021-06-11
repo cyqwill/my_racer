@@ -154,7 +154,8 @@ class DeepRacerEnv(gym.Env):
         params['progress'] = s.get_progress()
         params['steps'] = s.time
         params['speed'] = s.car.v
-        params['steering_angle'] = s.steering_angle
+        # params['steering_angle'] = s.steering_angle
+        params['steering_angle'] = s.car.turn_angle
         params['track_width'] = s.track_width / s.car.m_to_px
         return params
 
@@ -176,7 +177,7 @@ class DeepRacerEnv(gym.Env):
             to the policy and value functions, like accelerometer readings
         """
         image = s.camera_view.astype(np.float32)/255
-        params = self.get_params()
+        params = s.get_params()
         env_state = np.array(list(params.values()) + [s.driving_dist], dtype=np.float32)
         other_state = np.zeros(1, dtype=np.float32)
         return image, env_state, other_state
